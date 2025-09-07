@@ -12,11 +12,12 @@ const Sidebar = ({ expand, setExpand }) => {
   const [openMenu, setOpenMenu] = useState({id: 0, open: false});
 
   return (
-    <div className={`flex flex-col justify-between bg-[#212327] pt-7
+    <div className={`flex flex-col justify-between bg-gradient-to-b from-[#1b1c1d] via-[#242526] to-[#383b3f]
+ pt-7
     transition-all z-50 max-md:absolute max-md:h-screen ${expand ? 'p-4 w-64' : 'md:w-20 w-0 max-md:overflow-hidden'}`}>
       <div>
         <div className={`flex ${expand ? 'flex-row gap-10' : 'flex-col items-center gap-8'}`}>
-          <Image className={expand ? 'w-36' : 'w-10'}
+          <Image className={expand ? 'w-40' : 'w-10'}
             src={expand ? assets.logo_text : assets.logo_icon} alt=""/>
 
           <div onClick={() => expand ? setExpand(false) : setExpand(true)}
@@ -40,7 +41,7 @@ const Sidebar = ({ expand, setExpand }) => {
         ${expand ? 'bg-primary hover:opacity-90 rounded-2xl gap-2 p-2.5 w-max' : 
           'group relative h-9 w-9 mx-auto hover:bg-gray-500/30 rounded-lg'
         }`}>
-          <Image className={expand ? 'w-6' : 'w-7'} src={expand ? assets.chat_icon : assets.chat_icon_dull} alt=''/>
+          <Image className={expand ? 'w-6' : 'w-7'} src={expand ? assets.chat_icon : assets.chat_icon} alt=''/>
           <div className='absolute w-max -top-12 -right-12 opacity-0 group-hover:opacity-100
           transition bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg pointer-events-none'>
             New chat
@@ -72,7 +73,7 @@ const Sidebar = ({ expand, setExpand }) => {
               <div className={`w-3 h-3 absolute bg-black rotate-45 ${expand ? 'right-1/2' : 'left-4'} -bottom-1.5`}></div>
             </div>
           </div>
-          {expand && <> <span>Get App</span> <Image alt='' src={assets.new_icon}/> </>}
+          {expand && <> <span>Get App</span> <Image alt='' className='w-10' src={assets.new_icon}/> </>}
         </div>
 
         <div onClick={user ? null : openSignIn}

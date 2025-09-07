@@ -103,7 +103,7 @@ const PromptBox = ({setIsLoading, isLoading}) => {
   return (
     <form onSubmit={sendPrompt}
       className={`w-full ${(selectedChat?.messages?.length ?? 0) > 0 ? 'max-w-3xl' : 'max-w-2xl'}
-    bg-[#404045] p-4 rounded-3xl mt-4 transition-all`}>
+    bg-[#2b2b2f] p-4 rounded-3xl mt-4 transition-all`}>
         <textarea
         onKeyDown={handleKeyDown}
         className='outline-none w-full resize-none overflow-hidden break-words bg-transparent'
@@ -115,18 +115,18 @@ const PromptBox = ({setIsLoading, isLoading}) => {
           <div className='flex items-center gap-2'>
             <p className='flex items-center gap-2 text-xs border border-gray-300/40
               px-2 py-1 rounded-full cursor-pointer hover:bg-gray-500/20 transition'>
-              <Image className='h-5' src={assets.deepthink_icon} alt=''/>
-              Ful's DeepThink (R1)
+              <Image className='h-6 w-6' src={assets.deepthink_icon} alt=''/>
+              Ful's DeepSearch
             </p>
             <p className='flex items-center gap-2 text-xs border border-gray-300/40
               px-2 py-1 rounded-full cursor-pointer hover:bg-gray-500/20 transition'>
-              <Image className='h-5' src={assets.search_icon} alt=''/>
+              <Image className='h-6 w-6' src={assets.search_icon} alt=''/>
               Search
             </p>
           </div>
 
           <div className='flex items-center gap-2'>
-            <Image className='w-4 cursor-pointer' src={assets.pin_icon} alt=''/>
+            <Image className='w-5 cursor-pointer' src={assets.pin_icon} alt=''/>
             <button className={`${prompt ? 'bg-primary' : 'bg-[#71717a]'}
               rounded-full p-2 cursor-pointer`}>
               <Image className='w-3.5 aspect-square'

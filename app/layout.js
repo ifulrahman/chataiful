@@ -1,13 +1,13 @@
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import "./prism.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { AppContextProvider } from "@/context/AppContext";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({
-  variable: "--font-inter",
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  variable: "--font-space-grotesk",
 });
 
 export const metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <AppContextProvider>
         <html lang="en">
           <body
-            className={`${inter.className} antialiased`}
+            className={`${spaceGrotesk.className} antialiased`}
             >
             <Toaster toastOptions={
               {
