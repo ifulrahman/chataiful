@@ -11,9 +11,9 @@ This project is designed as a scalable base for building **AI-powered assistants
 ---
 
 ## Screenshots
-![screenshot-1](ss-1.jpg)
-![screenshot-2](ss-2.jpg)
-![screenshot-3](ss-3.jpg)
+![screenshot-1](ss-1.png)
+![screenshot-2](ss-2.png)
+![screenshot-3](ss-3.png)
 
 ---
 
